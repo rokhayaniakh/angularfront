@@ -1,0 +1,21 @@
+<h1 class="jumbotron">
+    Historique des Dépots</h1>
+
+<table class="table table-dark">
+    <thead class="tdead-dark">
+        <tr>
+            <th>Numéro de depot</th>
+            <th>Numéro de Compte</th>
+            <th>Montant Déposer</th>
+            <th>Date de Dépot</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let depot of listdepot">
+            <td>{{depot.id}}</td>
+            <td>{{depot.idcompte}}</td>
+            <td>{{depot.montant}}</td>
+            <td>{{depot.date || short}}</td>
+        </tr>
+    </tbody>
+</table>

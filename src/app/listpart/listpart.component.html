@@ -1,0 +1,19 @@
+<h1>Liste des Partenaire</h1>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>Rs</th>
+            <th>Ninea</th>
+            <th>Adresse</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let partenaire of listp">
+            <td>{{partenaire.rs}}</td>
+            <td>{{partenaire.ninea}}</td>
+            <td>{{partenaire.adresse}}</td>
+            <td>{{partenaire.status}}</td>
+        </tr>
+    </tbody>
+</table>

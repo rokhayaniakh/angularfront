@@ -1,0 +1,72 @@
+<div class="py-5">
+    <div class="row ">
+        <div class=" col-md-6 mx-auto ">
+            <span class="anchor" id="formLogin"></span>
+            <!-- form card login -->
+            <div class="card rounded-0">
+                <div class="card-header">
+                    <h3 class="mb-0">Enregistrer un partenaire</h3>
+                </div>
+                <div class="card-body">
+                    <form class="form">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="">Username</label>
+                                <input [(ngModel)]="partenaireData.username" type="text" class="form-control" id="" placeholder="Username" name="username">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="">Password</label>
+                                <input [(ngModel)]="partenaireData.password" type="password" class="form-control" id="" placeholder="Password" name="password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Adresse</label>
+                            <input [(ngModel)]="partenaireData.adresse" type="text" class="form-control" id="" placeholder="Adresse" name="adresse">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="">Rs</label>
+                                <input [(ngModel)]="partenaireData.rs" type="text" class="form-control" id="" placeholder="Rs" name="rs">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="">Ninea</label>
+                                <input [(ngModel)]="partenaireData.ninea" type="number" class="form-control" id="" placeholder="Ninea" name="ninea">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Status</label>
+                            <input [(ngModel)]="partenaireData.status" type="text" class="form-control" id="" placeholder="Status" name="status">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="">Nom Complet</label>
+                                <input [(ngModel)]="partenaireData.nomcomplet" type="text" class="form-control" id="" placeholder="Nom Complet" name="nomcomplet">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="">Email </label>
+                                <input [(ngModel)]="partenaireData.mail" type="email" class="form-control" id="" placeholder="Email" name="mail">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Tel</label>
+                            <input [(ngModel)]="partenaireData.tel" type="number" class="form-control" id="" placeholder="Tel" name="tel">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="">Adresse</label>
+                                <input [(ngModel)]="partenaireData.adresse" type="text" class="form-control" id="" placeholder="Adresse" name="adresse">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="">Status</label>
+                                <input [(ngModel)]="partenaireData.status" type="text" class="form-control" id="" placeholder="Status" name="status">
+                            </div>
+                        </div>
+                        <button (click)="partenaire()" type="button" class="btn btn-success" float-right>ajouter</button>
+                    </form>
+                </div>
+                <!--/card-block-->
+            </div>
+            <!-- /form card login -->
+        </div>
+    </div>
+</div>

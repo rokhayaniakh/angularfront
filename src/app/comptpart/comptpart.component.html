@@ -1,0 +1,26 @@
+<div class="py-5">
+    <div class="row ">
+        <div class=" col-md-6 mx-auto ">
+            <span class="anchor" id="formLogin"></span>
+            <!-- form card login -->
+            <div class="card rounded-0">
+                <div class="card-header">
+                    <h3 class="mb-0">Ajout compte Partenaire</h3>
+                </div>
+                <div class="card-body">
+                    <form class="form">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="">Identifiant Partenaire</label>
+                                <input [(ngModel)]="comptpartData.idpartenaire" type="number" class="form-control" id="" placeholder="Identifiant Partenaire" name="idpartenaire">
+                            </div>
+                        </div>
+                        <button (click)="comptpart()" type="button" class="btn btn-success" float-right>ajouter</button>
+                    </form>
+                </div>
+                <!--/card-block-->
+            </div>
+            <!-- /form card login -->
+        </div>
+    </div>
+</div>

@@ -1,17 +1,81 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Wari</a>
+    <a class="navbar-brand" href="/">Wari</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-  </button>
+    <span class="navbar-toggler-icon"></span>
+    </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link">Events</a>
+            <li class="dropdown" *ngIf="isAdmin()">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="/register">Ajouter User</a>
+                    </li>
+                    <li>
+                        <a href="/listuser">Lister User </a>
+                    </li>
+                    <li>
+                        <a href="comptuser">Ajout Compte User </a>
+                    </li>
+                    <li>
+                        <a href="#">Bloquer un User </a>
+                    </li>
+                </ul>
             </li>
-            <li class="nav-item">
-                <a class="nav-link">Members</a>
+        </ul>
+        <ul class="navbar-nav mr-auto">
+            <li class="dropdown" *ngIf="isUser()">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="/transaction">Transaction</a>,
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                </ul>
             </li>
+        </ul>
+        <ul class="nav navbar-nav">
+            <li class="dropdown" *ngIf="isSuperAdmin()">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">SuperAdmin
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="/partenaire">Ajouter Partenaire</a>
+                    </li>
+                    <li>
+                        <a href="/caissier">Ajout Caissier </a>
+                    </li>
+                    <li>
+                        <a href="/listpart">Lister Partenaire </a>
+                    </li>
+                    <li>
+                        <a href="/comptpart">Lister Partenaire </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="navbar-nav mr-auto">
+            <li class="dropdown" *ngIf="isCaissier()">
+                <a href=" # " class="dropdown-toggle " data-toggle="dropdown ">Caissier
+                    <span class="caret "></span></a>
+                <ul class="dropdown-menu ">
+                    <li>
+                        <a href="/depot ">Dépot</a>
+                    </li>
+                    <li>
+                        <a href="listerdepot">Historique des dépot</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="navbar-nav ">
+            <a class="nav-link " *ngIf="!_authService.loggedIn() " routerLink="/login " routerLinkActive="active ">Login</a>
+            <a class="nav-link " style="cursor:pointer " *ngIf="_authService.loggedIn() " (click)="_authService.logoutUser() ">Logout</a>
         </ul>
     </div>
 </nav>

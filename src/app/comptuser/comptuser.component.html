@@ -1,0 +1,30 @@
+<div class="py-5">
+    <div class="row ">
+        <div class=" col-md-6 mx-auto ">
+            <span class="anchor" id="formLogin"></span>
+            <!-- form card login -->
+            <div class="card rounded-0">
+                <div class="card-header">
+                    <h3 class="mb-0">Ajouter un compte User</h3>
+                </div>
+                <div class="card-body">
+                    <form class="form">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="">Username</label>
+                                <input [(ngModel)]="comptuserData.username" type="text" class="form-control" id="" placeholder="Username" name="username">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="">Numéro de Compte</label>
+                                <input [(ngModel)]="comptuserData.idcompte" type="number" class="form-control" id="" placeholder="Numéro Compte" name="idcompte">
+                            </div>
+                        </div>
+                        <button (click)="comptuser()" type="button" class="btn btn-success" float-right>ajouter</button>
+                    </form>
+                </div>
+                <!--/card-block-->
+            </div>
+            <!-- /form card login -->
+        </div>
+    </div>
+</div>

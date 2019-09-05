@@ -1,0 +1,61 @@
+<div class="py-5">
+    <div class="row ">
+        <div class=" col-md-6 mx-auto ">
+            <span class="anchor" id="formLogin"></span>
+            <!-- form card login -->
+            <div class="card rounded-0">
+                <div class="card-header">
+                    <h3 class="mb-0">Transaction</h3>
+                </div>
+                <div class="card-body">
+                    <form class="form">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="">Identifiant Service</label>
+                                <input type="number" class="form-control" id="" placeholder="Identifiant service" name="iduser">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="">Type de Transaction</label>
+                                <select name="idtype" id="" [(ngModel)]=" TransData.idtype">
+                                <option value="3">Envoi</option>
+                                <option value="4">Retrait</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Agence</label>
+                            <input [(ngModel)]="TransData.agence" type="text" class="form-control" id="" placeholder="Nom Agence" name="agence">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="">Somme</label>
+                                <input [(ngModel)]=" TransData.somme" type="text" class="form-control" id="" placeholder="Somme" name="somme">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="">Nom Envoyeur</label>
+                                <input [(ngModel)]="TransData.nomcomplet" type="text" class="form-control" id="" placeholder="Nom Envoyeur" name="nomcomplet">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Nom bénéficiaire</label>
+                            <input [(ngModel)]="TransData.nomcompletben" type="text" class="form-control" id="" placeholder="Nom Bénéficiaire" name="nomcompletben">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="">Tel</label>
+                                <input [(ngModel)]="TransData.tel" type="number" class="form-control" id="" placeholder="Tel" name="tel">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="">Numéro Compte</label>
+                                <input [(ngModel)]="TransData.numbcompte" type="number" class="form-control" id="" placeholder="Numéro Compte" name="numbcompte">
+                            </div>
+                        </div>
+                        <button (click)=" Transaction()" type="button" class="btn btn-success" float-right>ajouter</button>
+                    </form>
+                </div>
+                <!--/card-block-->
+            </div>
+            <!-- /form card login -->
+        </div>
+    </div>
+</div>
