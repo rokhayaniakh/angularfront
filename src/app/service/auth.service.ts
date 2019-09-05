@@ -10,6 +10,7 @@ export class AuthService {
     jwt: string;
     roles: Array<string>;
     username: string;
+    id;
 
     private headers={headers: new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('token'))};
     private _loginUrl = "http://localhost:8000/api/login_check";
@@ -99,8 +100,9 @@ export class AuthService {
         formData.append('somme', Trans.somme); 
         formData.append('nomcomplet', Trans.nomcomplet);
         formData.append('nomcompletben', Trans.nomcompletben);
-        formData.append('tel', Trans.tel);  
-        formData.append('numbcompte', Trans.numbcompte);
+        formData.append('tel', Trans.tel); 
+        formData.append('tele', Trans.tele);  
+        // formData.append('numbcompte', Trans.numbcompte);
         return this.http.post(endpoint, formData,this.headers);
     }
 
@@ -124,6 +126,9 @@ parseJWT(){
     let objJWT = jwtHelper.decodeToken(this.jwt);
     this.username = objJWT.username;
     this.roles = objJWT.roles;
+    this.id = objJWT.id;
+    console.log(this.id);
+
     
 }
 
