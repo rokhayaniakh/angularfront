@@ -10,7 +10,7 @@ export class AuthService {
     jwt: string;
     roles: Array<string>;
     username: string;
-    id;
+    // id;
 
     private headers={headers: new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('token'))};
     private _loginUrl = "http://localhost:8000/api/login_check";
@@ -92,7 +92,7 @@ export class AuthService {
         return this.http.post(endpoint, formData,this.headers);
     }
     Transaction(Trans) {
-        const endpoint = 'http://localhost:8000/trans';
+        const endpoint = 'http://localhost:8000/api/trans';
         const formData: FormData = new FormData();
         // formData.append('iduser',Trans.iduser);
         formData.append('idtype',Trans.idtype);
@@ -126,8 +126,8 @@ parseJWT(){
     let objJWT = jwtHelper.decodeToken(this.jwt);
     this.username = objJWT.username;
     this.roles = objJWT.roles;
-    this.id = objJWT.id;
-    console.log(this.id);
+    // this.id = objJWT.id;
+    // console.log(this.id);
 
     
 }

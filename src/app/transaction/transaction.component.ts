@@ -17,11 +17,11 @@ export class TransactionComponent implements OnInit {
   }
   Transaction() {
     console.log(this.TransData)
-    this._auth. Transaction(this.TransData)
+    this._auth.Transaction(this.TransData)
     .subscribe(
       res => {
         console.log(res)
-        // this.router.navigate(['/login'])
+      
       },
       err => console.log(err)
     )      

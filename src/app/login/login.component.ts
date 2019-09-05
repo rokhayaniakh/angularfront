@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../service/auth.service';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2'
-
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -22,7 +20,6 @@ export class LoginComponent implements OnInit {
         res => {
 
           Swal.fire('Authentification Réussie!!!')
-
           this.router.navigate(['/'])
           let jwt = res.body
           this._auth.saveToken(jwt)
